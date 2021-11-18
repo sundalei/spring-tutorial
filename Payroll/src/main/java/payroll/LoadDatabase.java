@@ -15,6 +15,8 @@ class LoadDatabase {
     CommandLineRunner initDatabase(EmployeeRepository repository) {
 
         return args -> {
+            repository.deleteAll();
+            
             log.info("Preloading " + repository.save(new Employee("Bilbo Baggins", "burglar")));
             log.info("Preloading " + repository.save(new Employee("Frodo Baggins", "thief")));
         };
