@@ -5,3 +5,13 @@ spring:
     jpa:
       repositories:
         bootstrap-mode: default
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      
+logging:
+  level:
+    org:
+      springframework: debug
